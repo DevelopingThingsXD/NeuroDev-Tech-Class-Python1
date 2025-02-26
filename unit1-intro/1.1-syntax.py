@@ -11,8 +11,10 @@
 # Comments are ignored by Python when the code runs. They are meant for humans.
 # Comments can help explain what the code does or temporarily disable parts of
 # code for testing purposes.
+# Hello my is ethan 
 
-'''
+
+'''''
 Triple quotes can also be used to write multi-line comments
 like this one.
 '''
