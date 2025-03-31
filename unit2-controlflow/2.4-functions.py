@@ -10,13 +10,7 @@
 # We define a function using the 'def' keyword. This line is called the header.
 # We name the function and follow it with a pair of parentheses and a colon.
 # If there are any parameters, they go inside the parentheses, separated by commas.
-# The body of the function goes below the header and is indented.
-def square(x):
-    print(x ** 2) # This function takes a number and prints the square of it.
-# We call a function by using its name followed by parentheses and
-# any necessary arguments. If the function returns a value, we can assign that
-# value to a variable.
-square(3) # This will print 9
+
 
 
 # Here's an example of a function without a return statement.
@@ -49,6 +43,16 @@ result = add_numbers(5, 7)  # Takes two arguments and assigns a value to 'result
 print(result)               # This will print 12
 
 
+
+# Functions can be nested:
+def outer():
+    print("Outer function")
+    def inner():
+        print("Inner function")
+    inner()
+outer() # Prints "Outer function" and then "Inner function"
+
+
 # Functions can take an arbitrary number of arguments:
 def multiply(*args):
     product = 1
@@ -59,11 +63,14 @@ result = multiply(2, 3, 4)
 print(result) # Prints 24
 
 
-# Functions can be passed as arguments to other functions:
+def square(x):
+    return x * x
+
 def do_twice(func, x):
-    return func(func(x)) 
-result = do_twice(square, 2) # This calls the 'square' function we defined earlier
-print(result) # Prints 16
+    return func(func(x))
+
+result = do_twice(square, 2)
+print(result)
 
 
 # Functions can be nested:
