@@ -1,39 +1,34 @@
-# Write a program that converts Roman numerals to integers.
+# Create a dictionary named my_dict containing the following key-value pairs:
+# - "name": "Alice"
+# - "age": 30
+# - "city": "New York"
+# - "is_student": False
+# - "scores": [85, 90, 95]
+my_dict = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York",
+    "is_student": False,
+    "scores": [85, 90, 95]
+}
 
-# Define a function called romanToInt that takes one parameter, a string,
-# representing the Roman numeral which will be converted. Name it whatever
-# you want as long as it's clear and helpful. For our purposes I'll just
-# call it 's'.
+# 1. Print the entire dictionary.
+print("Entire dictionary:", my_dict)
 
-# Inside the function, define a dictionary called roman_num (or something
-# similar) that maps Roman numeral characters to their corresponding integer
-# values. Here are the mappings:
-'''
-'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000
-'''
+# 2. Print the value associated with the key "name".
+print("Value for 'name':", my_dict["name"])
 
-# Initialize a variable called result and set it to 0. This will be used to
-# store the integer value of the Roman numeral.
+# 3. Print all the keys in the dictionary.
+print("All keys:", list(my_dict.keys()))
 
-# Loop through each character in the input string variable from left to right
-# using a for loop and the range() and len() functions. We will assume each
-# character is a valid Roman numeral and set up exception handling later.
+# 4. Update the value of "age" to 31 and print the updated dictionary.
+my_dict["age"] = 31
+print("Updated dictionary after changing 'age':", my_dict)
 
-# For each character 'i', we will initiate an if-else statement.
-# If i is less than (len(s) - 1), and roman_num[s[i]] is less than
-# roman_num[s[i + 1]], that means that a smaller character is coming before a
-# larger character, like in the example IV which equals 4. In cases like this,
-# we need to SUBTRACT roman_num[s[i]] from our result variable.
-# Otherwise, we need to ADD roman_num[s[i]] from our result variable.
-# Return the result.
+# 5. Add a new key-value pair "occupation": "Engineer" and print the updated dictionary.
+my_dict["occupation"] = "Engineer"
+print("Updated dictionary after adding 'occupation':", my_dict)
 
-# Define the main function. Use 'while True:' to loop until the user quits.
-# Use a 'try-except' block to catch errors. This will make sure the user's inputs
-# are all valid Roman numeral characters. Prompt them for a Roman numeral, and
-# also tell them they can enter 'Q' to quit. Use the .upper() method so that
-# the user's input can be lower or uppercase. Break from the loop if their
-# input is 'Q'. Otherwise, call romanToInt and pass the user's input as the
-# argument, and print the result. In the 'except' block, tell the user that
-# they did not provide a valid input, and call main() again.
+# 6. Print the length of the dictionary (number of key-value pairs).
+print("Length of dictionary:", len(my_dict))
 
-# Finally, call the main function.
