@@ -79,3 +79,36 @@ for metal in metals:
     # Nothing will happen. 'pass' is sometimes used as a placeholder when
     # a statement is required for the rest of the code to execute.
     # Without the pass statement, Python would raise a SyntaxError.
+
+
+# break - stop loop early
+animals = ["sheep", "pig", "cow"]
+for animal in animals:
+    if animal == "pig":
+        break
+    print(animal)
+
+
+
+# continue - skip this item
+trees = ["oak", "birch", "spruce"]
+for tree in trees:
+    if tree == "birch":
+        continue
+    print(tree)
+
+
+# pass - do nothing (placeholder)
+metals = ["gold", "iron", "copper"]
+for metal in metals:
+    pass
+
+
+
+
+
+name = " Wesman"
+
+print("Hi My Name Is", name)
+
+print(f"My name is{ name}")

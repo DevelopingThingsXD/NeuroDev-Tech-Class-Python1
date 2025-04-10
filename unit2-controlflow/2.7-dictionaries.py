@@ -53,3 +53,26 @@ for fruit, color in fruit_colors.items():
 fruits = ['apple', 'banana', 'orange']
 fruit_lengths = {fruit: len(fruit) for fruit in fruits}
 print(fruit_lengths) # should print {'apple': 5, 'banana': 6, 'orange': 6}
+
+
+users = {}
+
+# Step 1: Create account
+print("=== Create Account ===")
+new_username = input("Create a username: ")
+new_password = input("Create a password: ")
+
+# Store in dictionary
+users[new_username] = new_password
+print("Account created successfully!\n")
+
+# Step 2: Login
+print("=== Login ===")
+username = input("Enter your username: ")
+password = input("Enter your password: ")
+
+# Check login info
+if username in users and users[username] == password:
+    print("Access granted!")
+else:
+    print("Access denied!")
