@@ -1,0 +1,128 @@
+# ==========================================================
+# Lesson: What Is Control Flow?
+# ----------------------------------------------------------
+# Question: What is control flow in programming?
+# Instruction: Explain what control flow is and provide a simple example.
+#
+# Explanation:
+# Control flow is the order in which individual statements,
+# instructions, or function calls are executed or evaluated in a program.
+# It determines the path a program takes during its execution.
+# ==========================================================
+
+print("=== Lesson: What Is Control Flow? ===")
+num = 10
+if num > 0:
+    # This block executes if the condition (num > 0) is True.
+    print("The number is positive.")
+else:
+    # This block executes if the condition is False.
+    print("The number is non-positive.")
+
+# ==========================================================
+# Exercise 2.1: Conditional Statements
+# ----------------------------------------------------------
+# Question: Write a program that takes an integer and prints whether
+# it is positive, negative, or zero.
+# Instruction: Use conditional statements (if, elif, else) to determine and print the result.
+# ==========================================================
+
+def check_number(n):
+    # Check if the number is positive, negative, or zero.
+    if n > 0:
+        return "Positive"
+    elif n < 0:
+        return "Negative"
+    else:
+        return "Zero"
+
+# Example usage:
+number = 5  # You can change this value to test with other numbers.
+result = check_number(number)
+print("\n=== Exercise 2.1: Conditional Statements ===")
+
+
+# ==========================================================
+# Exercise 2.2: Loops
+# ----------------------------------------------------------
+# Question: Write a program that prints numbers from 1 to 10.
+# Instruction: Use a loop to iterate through the range of numbers and print each number.
+# ==========================================================
+
+print("\n=== Exercise 2.2: Loops (Using for loop) ===")
+# Using a for loop
+for i in range(1, 11):  # range(1, 11) generates numbers from 1 to 10.
+    print(i)
+
+print("\n=== Exercise 2.2: Loops (Using while loop) ===")
+# Using a while loop
+count = 1
+while count <= 10:
+    print(count)
+    count += 1  # Increment count to ensure the loop terminates.
+
+# ==========================================================
+# Exercise 2.3: Exception Handling
+# ----------------------------------------------------------
+# Question: Write a program that divides 100 by a number provided by the user.
+# The program should handle division by zero gracefully by catching exceptions.
+# Instruction: Use try-except blocks to handle any potential ZeroDivisionError.
+# ==========================================================
+
+def safe_division(divisor):
+    try:
+        result = 100 / divisor
+        return result
+    except ZeroDivisionError:
+        # Handle division by zero error.
+        return "Error: Division by zero is not allowed."
+
+# Example usage:
+# For demonstration, we use a fixed divisor value.
+divisor = 0  # Change this value to test different cases.
+print("\n=== Exercise 2.3: Exception Handling ===")
+print("Division result:", safe_division(divisor))
+
+# ==========================================================
+# Exercise 2.4: Functions
+# ----------------------------------------------------------
+# Question: Write a function that adds two numbers and returns the result.
+# Instruction: Define a function using def, and then call it with example parameters.
+# ==========================================================
+
+def add_numbers(a, b):
+    # Return the sum of two numbers.
+    return a + b
+
+# Example usage:
+x = 10
+y = 20
+print("\n=== Exercise 2.4: Functions ===")
+print("The sum of", x, "and", y, "is", add_numbers(x, y))
+
+# ==========================================================
+# Sidenote: Data Structures
+# ----------------------------------------------------------
+# Question: What are the basic data structures available in Python? 
+# Provide an example for each.
+#
+# Instruction: Illustrate examples of Lists, Tuples, Sets, and Dictionaries.
+# ==========================================================
+
+print("\n=== Sidenote: Data Structures ===")
+
+# List: Ordered, mutable collection.
+my_list = [1, 2, 3, 4, 5]
+print("List example:", my_list)
+
+# Tuple: Ordered, immutable collection.
+my_tuple = (1, 2, 3, 4, 5)
+print("Tuple example:", my_tuple)
+
+# Set: Unordered collection with unique elements.
+my_set = {1, 2, 3, 4, 5}
+print("Set example:", my_set)
+
+# Dictionary: Collection of key-value pairs.
+my_dict = {"a": 1, "b": 2, "c": 3}
+print("Dictionary example:", my_dict)
