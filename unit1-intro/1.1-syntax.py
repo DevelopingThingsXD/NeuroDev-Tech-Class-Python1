@@ -46,7 +46,7 @@ print(2 + 2)
 # Here are a few more examples of using the print() function:
 print("Python is fun!")
 print(10 * 3)
-print("The sum of 5 and 7 is", 5 + 7)
+print("The sum of 5 and 7 is" + str( 5 + 7))
 
 # The print() function is just one of many built-in Python functions.
 # Programmers can also define their own functions. We'll learn how to do that
